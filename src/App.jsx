@@ -17,15 +17,9 @@ function Main() {
         <section id="core-concepts">
           <h2> Core Concepts</h2>
           <ul>
-            <CoreConcept
-              title={CORE_CONCEPTS[0].title}
-              description={CORE_CONCEPTS[0].description}
-              image={CORE_CONCEPTS[0].image}
-            />
-            <CoreConcept {...CORE_CONCEPTS[1]} />{" "}
-            {/* Daha kısa yol bu şekildedir böylece belirlenen indexdeki tüm propsları ilgili yerlerine aktarır */}
-            <CoreConcept {...CORE_CONCEPTS[2]} />
-            <CoreConcept {...CORE_CONCEPTS[3]} />
+            {/* Aşağıdaki gibi map yöntemiyle sayısını bilmediğimiz componentleri otomatik şekilde ekrana listeleyebiliriz */}
+            {/* Böylece verilerin herhangisinde sorun olursa tasarım buna adapte olacak şekilde dizayn edilir */}
+            {CORE_CONCEPTS.map((conceptItem) => <CoreConcept {...conceptItem} />)}
           </ul>
         </section>
         <section id="examples">
